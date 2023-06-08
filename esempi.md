@@ -75,7 +75,7 @@ Seconda sezione
 Puoi creare elenchi delle cose da fare utilizzando `- [ ] ` per un elemento incompleto e `- [x] ` per un elemento completato. Questo è particolarmente utile per creare liste di controllo o liste di attività da completare.
 Esempio:
  - [ ] Fare la spesa
- - [x] Pagare le bollette
+ - [v] Pagare le bollette
  - [ ] Preparare la presentazione
 
 # Note a piè di pagina
