@@ -19,7 +19,7 @@ Questo è un ~~testo~~ barrato.
 Puoi creare liste ordinate o non ordinate utilizzando i seguenti simboli:
 Per una lista non ordinata, utilizza -, +, o * all'inizio di ogni elemento.
 Per una lista ordinata, utilizza numeri seguiti da un punto.
-Esempio:
+Esempio:  
 Lista non ordinata:
 - Elemento 1
 - Elemento 2
