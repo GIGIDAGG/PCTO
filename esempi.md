@@ -23,7 +23,8 @@ Esempio:
 Lista non ordinata:
 - Elemento 1
 - Elemento 2
-- Elemento 3  
+- Elemento 3
+
 Lista ordinata:
 1. Elemento 1
 2. Elemento 2
