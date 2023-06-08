@@ -37,7 +37,7 @@ Questo è un [link a OpenAI](https://openai.com).
 # Immagini
 Puoi incorporare immagini utilizzando la sintassi ![testo alternativo](URL dell'immagine), dove "testo alternativo" è una descrizione testuale dell'immagine e "URL dell'immagine" è l'indirizzo dell'immagine.
 Esempio:
-![Logo di OpenAI](https://example.com/logo.png)
+![Logo di JW.RG](https://assetsnffrgf-a.akamaihd.net/assets/ct/74c02ec143/images/siteLogo-jworg-print.png)
 
 # Tabelle
 Puoi creare tabelle utilizzando la sintassi a pipe | per separare le colonne e l'uso di trattini - per creare l'intestazione e separare le righe.
