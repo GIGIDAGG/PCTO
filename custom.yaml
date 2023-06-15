@@ -1,7 +1,0 @@
-
-train: ../datasets/train/images/  # train images (relative to 'path') 128 images
-val: ../datasets/valid/images/  # val images (relative to 'path') 128 images
-
-# Classes
-names:
-  0: buoy
