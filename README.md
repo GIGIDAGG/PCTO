@@ -128,11 +128,10 @@ Prima di utilizzare i dati per addestrare il modello, è necessario effettuare a
 
 ## Roboflow: per la labellizzazione delle immagini
 Questo progetto orientato all'allenamento di un modello di machine learning per il riconoscimento delle boe nel mare, durante processo di sviluppo del progetto ho richiesto il coinvolgimento Roboflow utilizzato per la labellizzazione delle immagini, cioè per annotare manualmente le boe nelle immagini del dataset.
-<div style="display: flex; justify-content: center;">
+<div style="display: flex; justify-content: center;"> 
   <img src="https://blog.roboflow.com/content/images/2021/08/256.png" alt="Descrizione" width="auto" height="128">
-</div>
-<div style="display: flex; justify-content: center;">
-  <img src="https://blog.roboflow.com/content/images/2021/08/256.png" alt="Descrizione" width="auto" height="128">
+  <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhDZiQLh-OuLCZf6hWbr2_7tAd3xUSuiPilMcprntD4rt36SegKYbNHsWTcYOb8gQYIdPuaVDrZHHb0uxAg9ViwnhxumVQG-H36bqifh7QWh0epo5cWZZyPiRJU_FQU0YY9dYrb0oBuA5S2_dPJXBLyAQ0CkyfdotuLi72kwPkulzvkWT6CW8iJjlkEpw/s320/grafico%20bello.png" alt="Descrizione" width="auto" height="256">
+  <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgK_FScMynDKDs7yQWjqfknJFPK6Z9golKlp6NtKvyC7qltw3E1ypbAJvngvPHU2WWD_Wnoap-qLxSDC3zpeCoO-aVY6SefeRCjBmwkbfsC80NpHShkl02-4WV3VR8yoHyu8SYBC17e4avI6Yic7kH7fopfD4T-TeN4sFPfShBPrla34YNc2-Wts8sXUA/s320/immagine_2023-06-16_135346177.png" alt="Descrizione" width="auto" height="256">
 </div>
 
 ## Codice Colab utilizzato
