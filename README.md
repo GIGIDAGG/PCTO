@@ -203,27 +203,32 @@ Questo progetto orientato all'allenamento di un modello di machine learning per 
 | --------- | --------- | --------- |
 |   75.3%   |   85.2%   |   69.0%   |
 
-## Test immagini su Yolov5 con database Coco
-Titolo del problema: Rilevamento errato di una boa mezza sommersa come una persona nel database YOLOv5 COCO
+## Problema: Rilevamento errato di una boa  come la testa di una persona nel database YOLOv5 COCO - Ipotesi di possibile causa
 
-Descrizione del problema:
-Nel database utilizzato da YOLOv5, notiamo un problema specifico riguardante il rilevamento di oggetti quando si tratta di un'immagine di una boa mezza sommersa. Invece di riconoscere correttamente la boa come un oggetto separato, il modello la classifica erroneamente come una persona o come la parte superiore della testa di una persona.
+**Descrizione del problema:**
 
-Dettagli del problema:
+Nel database utilizzato da YOLOv5, si è riscontrato un comportamento anomalo durante il rilevamento di un'immagine contenente una boa parzialmente sommersa. Secondo la nostra ipotesi, il modello potrebbe interpretare erroneamente la boa come la testa di una persona di cui si vede solo la parte superiore.
 
-Sintomo: La presenza di una boa mezza sommersa in un'immagine viene identificata in modo errato come una persona o come la parte superiore della testa di una persona.
-Cause possibili:
-La forma e la configurazione della boa sommersa possono essere simili a quelle di una persona in piedi o a una testa.
-La somiglianza visiva tra la boa e una persona può confondere il modello di rilevamento degli oggetti.
-Effetti:
-Il rilevamento errato della boa come una persona può portare a risultati imprecisi o inadeguati nell'applicazione che utilizza il modello YOLOv5. Ad esempio, potrebbe portare a errori nella conteggio degli oggetti o nella classificazione degli stessi.
-Possibili soluzioni:
-Aggiunta di esempi di immagini contenenti una boa mezza sommersa nel set di addestramento del modello, in modo che il modello apprenda la differenza tra una persona e una boa.
-Utilizzo di tecniche di data augmentation per creare varianti delle immagini di boa sommerse e di persone, in modo che il modello possa apprendere le differenze tra le due classi.
-Esplorazione di altre architetture di reti neurali o modelli di rilevamento degli oggetti che potrebbero essere più adatti per distinguere una boa da una persona in questa situazione specifica.
-Potenziali sfide:
-La correzione di questo problema richiede un'analisi accurata delle immagini e delle caratteristiche che possono confondere il modello di rilevamento. Inoltre, potrebbe essere necessario bilanciare il riconoscimento accurato di boe e persone in altre situazioni per evitare effetti indesiderati in altri contesti di utilizzo del modello.
-Nota: Il problema descritto è puramente ipotetico e si basa sulle specifiche fornite. La risoluzione reale di un problema di questo tipo richiederebbe un'analisi più dettagliata, dati specifici e una sperimentazione mirata.
+**Dettagli del problema:**
+
+- **Sintomo**: Quando viene presentata un'immagine contenente una boa mezza sommersa, il modello rileva erroneamente questa configurazione come la testa di una persona.
+- **Cause possibili**:
+  1. La forma e la configurazione della boa sommersa possono assomigliare a quelle di una persona in piedi o a una testa.
+  2. La somiglianza visiva tra la boa e una persona potrebbe confondere il modello di rilevamento degli oggetti.
+
+**Effetti**:
+
+Il rilevamento errato della boa come una persona può portare a risultati imprecisi o inadeguati nell'applicazione che utilizza il modello YOLOv5. Ciò potrebbe influire negativamente sul corretto conteggio degli oggetti o sulla classificazione degli stessi.
+
+**Possibili soluzioni**:
+
+1. Aggiungere al set di addestramento del modello esempi di immagini contenenti boe, in modo che il modello possa apprendere la differenza tra una persona e una boa.
+2. Utilizzare tecniche di data augmentation per creare varianti delle immagini di boa sommerse e di persone, in modo che il modello possa apprendere a distinguere le due classi.
+3. Esplorare altre architetture di reti neurali o modelli di rilevamento degli oggetti che potrebbero essere più adatti a distinguere una boa da una persona in questa situazione specifica.
+
+**Potenziali sfide**:
+
+La correzione di questo problema richiede un'analisi accurata delle immagini e delle caratteristiche che potrebbero confondere il modello di rilevamento. Inoltre, potrebbe essere necessario bilanciare il riconoscimento accurato di boe e persone in altre situazioni per evitare effetti indesiderati in altri contesti di utilizzo del modello.
 <div style="display: flex; justify-content: center;"> 
   <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh6adIyipHKIZjDkMUljHlJ7pUqSH_aqFiULEVts1fEUry03JTUMjNh_VtT9iiQpt78s7IkATPNJZEAToIBC5iDXUrNeS08ItmRfsEEDJ0lQ5wMOCrln5h7VAN8LutBpzXaoN-P1UJ-EUaSOReh4wffXCqgOt65ryoeMyF9XnQQ5kjCSeb3sh2jJPR_2Q/s320/Immagine%20WhatsApp%202023-06-16%20ore%2013.08.14.jpg" alt="Descrizione" width="auto" height="128">
 </div>
