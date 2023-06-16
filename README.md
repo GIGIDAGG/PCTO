@@ -203,7 +203,7 @@ Questo progetto orientato all'allenamento di un modello di machine learning per 
 | --------- | --------- | --------- |
 |   75.3%   |   85.2%   |   69.0%   |
 
-## Problema: Rilevamento errato di una boa  come la testa di una persona nel database YOLOv5 COCO - Ipotesi di possibile causa
+## Problema: Rilevamento errato di una boa  come una persona nel database YOLOv5 COCO - Ipotesi di possibile causa
 
 **Descrizione del problema:**
 
