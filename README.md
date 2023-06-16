@@ -101,7 +101,12 @@ else:
 
 video.release()
 ```
-
+```python
+        if key == 100:
+            if j < len(frames)-1:
+                j = j + 1
+                cv2.imshow('video', frames[j])
+```
 ## Descrizione del codice del video player
 Questo codice utilizza le librerie OpenCV e tkinter per creare un'applicazione che consente di selezionare un video, visualizzarlo e catturare i frame desiderati. Ecco una descrizione dettagliata del codice:
 
@@ -118,7 +123,65 @@ Questo codice utilizza le librerie OpenCV e tkinter per creare un'applicazione c
 6. Visualizzazione del primo frame del video: viene mostrato il primo frame del video utilizzando la funzione `imshow()` di OpenCV.
 
 7. Ciclo per controllare la visualizzazione dei frame: viene eseguito un ciclo while infinito per gestire l'interazione dell'utente con il video. Vengono utilizzate diverse condizioni per controllare l'input dell'utente e gestire il cambio di frame, la cattura degli screenshot e la navigazione all'interno del video.
-
+      - ### AVANTI
+        ```python
+        if key == 100:
+            if j < len(frames)-1:
+                j = j + 1
+                cv2.imshow('video', frames[j])
+        ```
+        Consente di navigare all'interno del video scorrendo quest'ultimo in avanti, cambiando di frame in frame ad ogni click.
+      - ### INDIETRO
+        ```python
+        if key == 97:
+            if j > 0:
+                j = j - 1
+                cv2.imshow('video', frames[j])
+            else:
+                continue
+        ```
+        Consente di navigare all'interno del video scorrendo quest'ultimo all'indietro, cambiando di frame in frame ad ogni click.
+      - ### CATTURA SCREENSHOT
+        ```python
+        if key == 32:
+            if i == 0:
+                frame_path = seleziona_cartella()
+            if frame_path:
+                fourK = cv2.resize(frames[j], (3840, 2160))
+                cv2.imwrite(frame_path+'/frame'+str(i+1)+'.png', fourK)
+                i = i + 1
+            else:
+                print("Nessuna cartella selezionata.")
+        ```
+        Consente la cattura degli screenshot all'interno del video durante lo scorrimento di esso.
+      - ### AVANTI VELOCE
+        ```python
+        if key == 13:
+            key = 0
+            while True:
+                if j < len(frames)-1:
+                    key = cv2.waitKey(10)
+                    j = j + 1
+                    cv2.imshow('video', frames[j])
+                    if key == 13:
+                        break
+                else:
+                    break
+        ```
+        Consente di navigare all'interno del video scorrendo quest'ultimo velocemente in avanti, premendo il tasto una sola volta oppure ripremendolo per fermarlo.
+      - ### INDIETRO VELOCE
+        ```python
+        if key == 8:
+            key = 0
+            while True:
+                if j > 0:
+                    key = cv2.waitKey(10)
+                    j = j - 1
+                    cv2.imshow('video', frames[j])
+                    if key == 8:
+                        break
+        ```
+        Consente di navigare all'interno del video scorrendo quest'ultimo velocemente all'indietro, premendo il tasto una sola volta oppure ripremendolo per fermarlo.
 8. Rilascio delle risorse: alla fine, viene rilasciato il video utilizzando il metodo `release()` di OpenCV.
 
 In generale, il codice permette di selezionare un video, visualizzarlo e catturare gli screenshot dei frame desiderati in una cartella specificata dall'utente. L'utente può navigare avanti e indietro tra i frame, catturare gli screenshot premendo il tasto spazio, riprodurre il video in sequenza premendo il tasto Invio e interrompere l'esecuzione dell'applicazione premendo il tasto Esc.
