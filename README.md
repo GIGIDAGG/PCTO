@@ -134,6 +134,18 @@ Questo progetto orientato all'allenamento di un modello di machine learning per 
   <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgK_FScMynDKDs7yQWjqfknJFPK6Z9golKlp6NtKvyC7qltw3E1ypbAJvngvPHU2WWD_Wnoap-qLxSDC3zpeCoO-aVY6SefeRCjBmwkbfsC80NpHShkl02-4WV3VR8yoHyu8SYBC17e4avI6Yic7kH7fopfD4T-TeN4sFPfShBPrla34YNc2-Wts8sXUA/s320/immagine_2023-06-16_135346177.png" alt="Descrizione" width="auto" height="200">
 </div>
 
+### Risultati training Roboflow
+
+|    mAP    | precision |  recall   |
+| --------- | --------- | --------- |
+|   75.3%   |   85.2%   |   69.0%   |
+
+## Test immagini su Yolov5 con database Coco
+
+<div style="display: flex; justify-content: center;"> 
+  <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh6adIyipHKIZjDkMUljHlJ7pUqSH_aqFiULEVts1fEUry03JTUMjNh_VtT9iiQpt78s7IkATPNJZEAToIBC5iDXUrNeS08ItmRfsEEDJ0lQ5wMOCrln5h7VAN8LutBpzXaoN-P1UJ-EUaSOReh4wffXCqgOt65ryoeMyF9XnQQ5kjCSeb3sh2jJPR_2Q/s320/Immagine%20WhatsApp%202023-06-16%20ore%2013.08.14.jpg" alt="Descrizione" width="auto" height="128">
+</div>
+
 ## Codice Colab utilizzato
 ```python
 !git clone https://github.com/ultralytics/yolov5
