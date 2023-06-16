@@ -101,12 +101,6 @@ else:
 
 video.release()
 ```
-```python
-        if key == 100:
-            if j < len(frames)-1:
-                j = j + 1
-                cv2.imshow('video', frames[j])
-```
 ## Descrizione del codice del video player
 Questo codice utilizza le librerie OpenCV e tkinter per creare un'applicazione che consente di selezionare un video, visualizzarlo e catturare i frame desiderati. Ecco una descrizione dettagliata del codice:
 
