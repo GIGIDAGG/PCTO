@@ -259,11 +259,12 @@ Successivamente, viene aperto il file di configurazione "coco128.yaml" utilizzat
 Dopo aver impostato l'ambiente, viene eseguito l'addestramento del modello utilizzando il comando "python train.py". Vengono specificate diverse opzioni, come la dimensione delle immagini di input, il numero di epoche e il percorso del file di configurazione del dataset.
 
 Infine, viene eseguita la fase di rilevamento delle boe sul video specificato utilizzando il comando "python detect.py". Vengono utilizzati i pesi allenati durante la fase di addestramento per effettuare la rilevazione.
-
+## Risultato finale
+[![Video riconosciumento boe](https://img.youtube.com/vi/BJnXyAlrrwE/0.jpg)](https://www.youtube.com/watch?v=BJnXyAlrrwE)
 ## Conclusioni
 Questo progetto dimostra come utilizzare Visual Studio per creare un video player personalizzato con funzionalità di avanzamento, retrocessione, stop e riproduzione. Successivamente, viene mostrato come utilizzare Roboflow per annotare manualmente le boe nelle immagini del dataset e Colab per scrivere il codice utilizzando il framework YOLOv5 e il dataset COCO. Il modello di riconoscimento delle boe viene quindi addestrato e testato sul video specificato.
 
 Si noti che questo è solo un esempio di implementazione e potrebbero essere necessarie ulteriori personalizzazioni e ottimizzazioni per adattare il progetto alle esigenze specifiche.
 
 
-[![Video riconosciumento boe](https://img.youtube.com/vi/BJnXyAlrrwE/0.jpg)](https://www.youtube.com/watch?v=BJnXyAlrrwE)
+
