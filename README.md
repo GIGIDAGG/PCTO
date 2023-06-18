@@ -184,7 +184,7 @@ In generale, il codice permette di selezionare un video, visualizzarlo e cattura
 Prima di utilizzare i dati per addestrare il modello, è necessario effettuare alcune operazioni di pre-elaborazione. Questo può includere il ridimensionamento dei frame del video per uniformarli a una dimensione specifica, la normalizzazione dei valori dei pixel, l'estrazione di determinate caratteristiche visive rilevanti o la suddivisione dei dati in un set di addestramento e un set di test per valutare le prestazioni del modello.
 
 ## Roboflow: per la labellizzazione delle immagini
-Questo progetto orientato all'allenamento di un modello di machine learning per il riconoscimento delle boe nel mare, durante processo di sviluppo del progetto ho richiesto il coinvolgimento Roboflow utilizzato per la labellizzazione delle immagini, cioè per annotare manualmente le boe nelle immagini del dataset.
+Questo progetto orientato all'allenamento di un modello di machine learning per il riconoscimento delle boe nel mare, durante questo processo di sviluppo del progetto è richiesto il coinvolgimento Roboflow che viene utilizzato per la labellizzazione delle immagini, cioè per annotare manualmente le boe nelle immagini del dataset.
 <div style="display: flex; justify-content: center;"> 
   <img src="https://blog.roboflow.com/content/images/2021/08/256.png" alt="Descrizione" width="auto" height="128">
   <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhDZiQLh-OuLCZf6hWbr2_7tAd3xUSuiPilMcprntD4rt36SegKYbNHsWTcYOb8gQYIdPuaVDrZHHb0uxAg9ViwnhxumVQG-H36bqifh7QWh0epo5cWZZyPiRJU_FQU0YY9dYrb0oBuA5S2_dPJXBLyAQ0CkyfdotuLi72kwPkulzvkWT6CW8iJjlkEpw/s320/grafico%20bello.png" alt="Descrizione" width="auto" height="200">
