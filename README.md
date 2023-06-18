@@ -1,10 +1,10 @@
 # Progetto per il riconoscimento delle boe nel mare utilizzando YOLOv5
 
 ## Introduzione
-Questo progetto è orientato all'allenamento di un modello di machine learning per il riconoscimento delle boe nel mare. Il processo di sviluppo del progetto coinvolge l'utilizzo di Visual Studio per la realizzazione di un video player personalizzato che consente di scorrere il video avanti, indietro, stop e play. Successivamente, viene utilizzato Roboflow per la labellizzazione delle immagini, mentre Colab viene utilizzato per scrivere il codice utilizzando il framework YOLOv5 e il dataset COCO.
+Questo progetto è orientato all'allenamento di un modello di machine learning per il riconoscimento delle boe nel mare. Il processo di sviluppo del progetto coinvolge l'utilizzo di VS code per la realizzazione di un video player personalizzato che consente di scorrere il video avanti, indietro, stop, play e salvare i frame interessati. Successivamente, viene utilizzato Roboflow per la labellizzazione delle immagini, mentre Colab viene utilizzato per scrivere il codice utilizzando il framework YOLOv5 e il dataset COCO aggiungendoci il nostro dataset.
 
 ## Strumenti utilizzati
-- Visual Studio: utilizzato per creare un video player personalizzato con funzionalità di avanzamento, retrocessione, stop e riproduzione.
+- VS Code: utilizzato per creare un video player personalizzato con funzionalità di avanzamento, retrocessione, stop, riproduzione e salvataggio.
 - Roboflow: utilizzato per la labellizzazione delle immagini, cioè per annotare manualmente le boe nelle immagini del dataset.
 - Colab: utilizzato per scrivere il codice utilizzando il framework YOLOv5 e il dataset COCO.
 - YOLOv5: framework di deep learning utilizzato per l'addestramento del modello di riconoscimento delle boe.
