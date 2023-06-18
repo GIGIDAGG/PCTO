@@ -117,7 +117,7 @@ Questo codice utilizza le librerie OpenCV e tkinter per creare un'applicazione c
 6. Visualizzazione del primo frame del video: viene mostrato il primo frame del video utilizzando la funzione `imshow()` di OpenCV.
 
 7. Ciclo per controllare la visualizzazione dei frame: viene eseguito un ciclo while infinito per gestire l'interazione dell'utente con il video. Vengono utilizzate diverse condizioni per controllare l'input dell'utente e gestire il cambio di frame, la cattura degli screenshot e la navigazione all'interno del video.
-      - ### AVANTI
+      - ### AVANTI FRAME BY FRAME
         ```python
         if key == 100:
             if j < len(frames)-1:
@@ -125,7 +125,7 @@ Questo codice utilizza le librerie OpenCV e tkinter per creare un'applicazione c
                 cv2.imshow('video', frames[j])
         ```
         Consente di navigare all'interno del video scorrendo quest'ultimo in avanti, cambiando di frame in frame ad ogni click.
-      - ### INDIETRO
+      - ### INDIETRO FRAME BY FRAME
         ```python
         if key == 97:
             if j > 0:
@@ -148,7 +148,7 @@ Questo codice utilizza le librerie OpenCV e tkinter per creare un'applicazione c
                 print("Nessuna cartella selezionata.")
         ```
         Consente la cattura degli screenshot all'interno del video durante lo scorrimento di esso.
-      - ### AVANTI VELOCE
+      - ### AVANTI VELOCE CONTINUATIVO
         ```python
         if key == 13:
             key = 0
@@ -163,7 +163,7 @@ Questo codice utilizza le librerie OpenCV e tkinter per creare un'applicazione c
                     break
         ```
         Consente di navigare all'interno del video scorrendo quest'ultimo velocemente in avanti, premendo il tasto una sola volta oppure ripremendolo per fermarlo.
-      - ### INDIETRO VELOCE
+      - ### INDIETRO VELOCE CONTINUATIVO
         ```python
         if key == 8:
             key = 0
