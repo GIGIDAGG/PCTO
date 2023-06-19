@@ -16,17 +16,19 @@ Per addestrare il modello di riconoscimento delle boe, è necessario raccogliere
 ## Codice Python utilizzato in Visual Studio - player
 ```python
 import cv2
-import tkinter 
+import tkinter
 from tkinter import filedialog
 
 root = tkinter.Tk()
 root.withdraw()
 
 def seleziona_video():
+    # Apre la finestra di dialogo per selezionare il file video
     file_path = filedialog.askopenfilename(filetypes=[("File video", "*.mp4; *.avi")])
     return file_path
 
 def seleziona_cartella():
+    # Apre la finestra di dialogo per selezionare una cartella
     cartella = filedialog.askdirectory()
     return cartella
 
@@ -34,11 +36,11 @@ video_path = seleziona_video()
 
 if video_path:
     video = cv2.VideoCapture(video_path)
-    i = 0 #contatore screenshots
+    i = 0 # Contatore degli screenshot
     frames = []
-    j = 0 #contatore frames video capture
+    j = 0 # Contatore dei frames del video
 
-    #1° metodo per ottenere i frame di video
+    # 1° metodo per ottenere i frame del video
     while video.isOpened():
         if video.grab():
             flag, frame = video.retrieve()
@@ -54,16 +56,19 @@ if video_path:
     while True:
         key = cv2.waitKey(10)
         if key == 100:
+            # Tasto 'd' - Avanza al frame successivo
             if j < len(frames)-1:
                 j = j + 1
                 cv2.imshow('video', frames[j])
         if key == 97:
+            # Tasto 'a' - Torna al frame precedente
             if j > 0:
                 j = j - 1
                 cv2.imshow('video', frames[j])
             else:
                 continue
         if key == 32:
+            # Tasto 'spazio' - Salva lo screenshot corrente
             if i == 0:
                 frame_path = seleziona_cartella()
             if frame_path:
@@ -73,6 +78,7 @@ if video_path:
             else:
                 print("Nessuna cartella selezionata.")
         if key == 13:
+            # Tasto 'Invio' - Riproduci il video fino alla fine
             key = 0
             while True:
                 if j < len(frames)-1:
@@ -84,6 +90,7 @@ if video_path:
                 else:
                     break
         if key == 8:
+            # Tasto 'Backspace' - Riproduci il video all'indietro
             key = 0
             while True:
                 if j > 0:
@@ -95,11 +102,13 @@ if video_path:
                 else:
                     break
         if key == 27:
+            # Tasto 'Esc' - Esci dal programma
             break
 else:
-    print("Nessuna video selezionato.")
+    print("Nessun video selezionato.")
 
 video.release()
+
 ```
 ## Descrizione del codice del video player
 Questo codice utilizza le librerie OpenCV e tkinter per creare un'applicazione che consente di selezionare un video, visualizzarlo e catturare i frame desiderati. Ecco una descrizione dettagliata del codice:
