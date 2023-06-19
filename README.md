@@ -2,6 +2,9 @@
 
 ## Introduzione
 Questo progetto è orientato all'allenamento di un modello di machine learning per il riconoscimento delle boe nel mare. Il processo di sviluppo del progetto coinvolge l'utilizzo di VS code per la realizzazione di un video player personalizzato che consente di scorrere il video avanti, indietro, stop, play e salvare i frame interessati. Successivamente, viene utilizzato Roboflow per la labellizzazione delle immagini, mentre Colab viene utilizzato per scrivere il codice utilizzando il framework YOLOv5 e il dataset COCO aggiungendoci il nostro dataset.
+<div style="display: flex; justify-content: center;"> 
+  <img src="https://i.imgur.com/MaC4WEi.png" alt="Descrizione" width="auto" height="200">
+</div>
 
 ## Strumenti utilizzati
 - VS Code: utilizzato per creare un video player personalizzato con funzionalità di avanzamento, retrocessione, stop, riproduzione e salvataggio.
@@ -13,103 +16,17 @@ Questo progetto è orientato all'allenamento di un modello di machine learning p
 ## Raccolta dati
 Per addestrare il modello di riconoscimento delle boe, è necessario raccogliere un ampio set di dati contenente video che mostrano boe nel mare. È importante acquisire sequenze di diversi tipi di boe, in diverse condizioni di illuminazione e di sfondo, al fine di rendere il modello più robusto e generale. Il dataset può essere arricchito con l'aggiunta di etichette che indicano la presenza o l'assenza di boe in ciascun frame del video.
 
-## Codice Python utilizzato in Visual Studio - player
-```python
-import cv2
-import tkinter
-from tkinter import filedialog
+## Workflow: Fasi progetto
+<div style="display: flex; justify-content: center;"> 
+  <img src="https://i.imgur.com/ZeWqbIQ.png" alt="Descrizione" width="auto" height="900">
+</div>
 
-root = tkinter.Tk()
-root.withdraw()
+- Raccolta dati: Vengono raccolte immagini o video che contengono boe nel mare.
+- Creazione del video player in Python: Utilizzando librerie Python come OpenCV o Pygame, viene creato un video player che consente di visualizzare i file video o immagini per la cattura dei frame di boe.
+- Labellamento manuale delle immagini tramite Roboflow: Le immagini raccolte vengono caricate su Roboflow, e vengono manualmente assegnate le etichette corrispondenti alle boe presenti in ciascuna immagine.
+- Allenamento del modello di machine learning: Viene utilizzato il framework YOLOv5. Durante l'allenamento, il modello impara a riconoscere le boe nel mare in base alle etichette fornite durante il labellamento.
+- Rilevamento delle boe in un qualsiasi file multimediale: Rilevare le boe in qualsiasi file multimediale, come immagini o video. Il modello di machine learning utilizza i parametri appresi durante l'allenamento per identificare e localizzare le boe nell'input fornito, restituendo le coordinate dei bounding box che le circondano.
 
-def seleziona_video():
-    # Apre la finestra di dialogo per selezionare il file video
-    file_path = filedialog.askopenfilename(filetypes=[("File video", "*.mp4; *.avi")])
-    return file_path
-
-def seleziona_cartella():
-    # Apre la finestra di dialogo per selezionare una cartella
-    cartella = filedialog.askdirectory()
-    return cartella
-
-video_path = seleziona_video()
-
-if video_path:
-    video = cv2.VideoCapture(video_path)
-    i = 0 # Contatore degli screenshot
-    frames = []
-    j = 0 # Contatore dei frames del video
-
-    # 1° metodo per ottenere i frame del video
-    while video.isOpened():
-        if video.grab():
-            flag, frame = video.retrieve()
-            if not flag:
-                continue
-            else:
-                frame = cv2.resize(frame, (1920, 1080))
-                frames.append(frame)
-        else:
-            break
-    cv2.imshow('video', frames[0])
-
-    while True:
-        key = cv2.waitKey(10)
-        if key == 100:
-            # Tasto 'd' - Avanza al frame successivo
-            if j < len(frames)-1:
-                j = j + 1
-                cv2.imshow('video', frames[j])
-        if key == 97:
-            # Tasto 'a' - Torna al frame precedente
-            if j > 0:
-                j = j - 1
-                cv2.imshow('video', frames[j])
-            else:
-                continue
-        if key == 32:
-            # Tasto 'spazio' - Salva lo screenshot corrente
-            if i == 0:
-                frame_path = seleziona_cartella()
-            if frame_path:
-                fourK = cv2.resize(frames[j], (3840, 2160))
-                cv2.imwrite(frame_path+'/frame'+str(i+1)+'.png', fourK)
-                i = i + 1
-            else:
-                print("Nessuna cartella selezionata.")
-        if key == 13:
-            # Tasto 'Invio' - Riproduci il video fino alla fine
-            key = 0
-            while True:
-                if j < len(frames)-1:
-                    key = cv2.waitKey(10)
-                    j = j + 1
-                    cv2.imshow('video', frames[j])
-                    if key == 13:
-                        break
-                else:
-                    break
-        if key == 8:
-            # Tasto 'Backspace' - Riproduci il video all'indietro
-            key = 0
-            while True:
-                if j > 0:
-                    key = cv2.waitKey(10)
-                    j = j - 1
-                    cv2.imshow('video', frames[j])
-                    if key == 8:
-                        break
-                else:
-                    break
-        if key == 27:
-            # Tasto 'Esc' - Esci dal programma
-            break
-else:
-    print("Nessun video selezionato.")
-
-video.release()
-
-```
 ## Descrizione del codice del video player
 Questo codice utilizza le librerie OpenCV e tkinter per creare un'applicazione che consente di selezionare un video, visualizzarlo e catturare i frame desiderati. Ecco una descrizione dettagliata del codice:
 
