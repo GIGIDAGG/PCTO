@@ -13,11 +13,8 @@ Questo progetto è orientato all'allenamento di un modello di machine learning p
 - YOLOv5: framework di deep learning utilizzato per l'addestramento del modello di riconoscimento delle boe.
 - Dataset COCO: dataset di immagini ampiamente utilizzato per l'addestramento di modelli di riconoscimento oggetti.
 
-## Raccolta dati
-Per addestrare il modello di riconoscimento delle boe, è necessario raccogliere un ampio set di dati contenente video che mostrano boe nel mare. È importante acquisire sequenze di diversi tipi di boe, in diverse condizioni di illuminazione e di sfondo, al fine di rendere il modello più robusto e generale. Il dataset può essere arricchito con l'aggiunta di etichette che indicano la presenza o l'assenza di boe in ciascun frame del video.
-
 ## Workflow: Fasi progetto
-<div style="display: flex; justify-content: center;"> 
+<div style="display: flex; justify-content: center;">
   <img src="https://i.imgur.com/ZeWqbIQ.png" alt="Descrizione" width="auto" height="900">
 </div>
 
@@ -26,6 +23,9 @@ Per addestrare il modello di riconoscimento delle boe, è necessario raccogliere
 - Labellamento manuale delle immagini tramite Roboflow: Le immagini raccolte vengono caricate su Roboflow, e vengono manualmente assegnate le etichette corrispondenti alle boe presenti in ciascuna immagine.
 - Allenamento del modello di machine learning: Viene utilizzato il framework YOLOv5. Durante l'allenamento, il modello impara a riconoscere le boe nel mare in base alle etichette fornite durante il labellamento.
 - Rilevamento delle boe in un qualsiasi file multimediale: Rilevare le boe in qualsiasi file multimediale, come immagini o video. Il modello di machine learning utilizza i parametri appresi durante l'allenamento per identificare e localizzare le boe nell'input fornito, restituendo le coordinate dei bounding box che le circondano.
+
+## Raccolta dati
+Per addestrare il modello di riconoscimento delle boe, è necessario raccogliere un ampio set di dati contenente video che mostrano boe nel mare. È importante acquisire sequenze di diversi tipi di boe, in diverse condizioni di illuminazione e di sfondo, al fine di rendere il modello più robusto e generale. Il dataset può essere arricchito con l'aggiunta di etichette che indicano la presenza o l'assenza di boe in ciascun frame del video.
 
 ## Descrizione del codice del video player
 Questo codice utilizza le librerie OpenCV e tkinter per creare un'applicazione che consente di selezionare un video, visualizzarlo e catturare i frame desiderati. Ecco una descrizione dettagliata del codice:
