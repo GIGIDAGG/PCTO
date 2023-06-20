@@ -45,6 +45,7 @@ Questo codice utilizza le librerie OpenCV e tkinter per creare un'applicazione c
 7. Ciclo per controllare la visualizzazione dei frame: viene eseguito un ciclo while infinito per gestire l'interazione dell'utente con il video. Vengono utilizzate diverse condizioni per controllare l'input dell'utente e gestire il cambio di frame, la cattura degli screenshot e la navigazione all'interno del video.
       - ### AVANTI FRAME BY FRAME
         ```python
+        #Scorrimento avanti frame per frame cliccando il tasto 'd'
         if key == 100:
             if j < len(frames)-1:
                 j = j + 1
@@ -53,8 +54,9 @@ Questo codice utilizza le librerie OpenCV e tkinter per creare un'applicazione c
         Consente di navigare all'interno del video scorrendo quest'ultimo in avanti, cambiando di frame in frame ad ogni click.
       - ### INDIETRO FRAME BY FRAME
         ```python
+        #Scorrimento indietro frame per frame cliccando il tasto 'a'
         if key == 97:
-            if j > 0:
+            if j > 0: #Condizione di controllo per verificare che ci siano frame precedenti a quello corrente
                 j = j - 1
                 cv2.imshow('video', frames[j])
             else:
@@ -63,11 +65,12 @@ Questo codice utilizza le librerie OpenCV e tkinter per creare un'applicazione c
         Consente di navigare all'interno del video scorrendo quest'ultimo all'indietro, cambiando di frame in frame ad ogni click.
       - ### CATTURA SCREENSHOT
         ```python
+        #Salvataggio frame cliccando il tasto [spazio]
         if key == 32:
-            if i == 0:
+            if i == 0: #Condizione di controllo per selezione il percorso file 
                 frame_path = seleziona_cartella()
-            if frame_path:
-                fourK = cv2.resize(frames[j], (3840, 2160))
+            if frame_path: #Condizione di controllo per verificare l'esistenza di un percorso file di salvataggio dei frame
+                fourK = cv2.resize(frames[j], (3840, 2160)) #Ridimensionamento del frame alla qualità originale del video
                 cv2.imwrite(frame_path+'/frame'+str(i+1)+'.png', fourK)
                 i = i + 1
             else:
@@ -76,14 +79,15 @@ Questo codice utilizza le librerie OpenCV e tkinter per creare un'applicazione c
         Consente la cattura degli screenshot all'interno del video durante lo scorrimento di esso.
       - ### AVANTI VELOCE CONTINUATIVO
         ```python
+        #tasto play cliccando [invio]
         if key == 13:
-            key = 0
-            while True:
+            key = 0 #azzeramento valore ascii salvato
+            while True: #ciclo iterativo per andare avanti frame per frame
                 if j < len(frames)-1:
                     key = cv2.waitKey(10)
                     j = j + 1
                     cv2.imshow('video', frames[j])
-                    if key == 13:
+                    if key == 13: #condizione per la rottura del ciclo
                         break
                 else:
                     break
@@ -91,14 +95,15 @@ Questo codice utilizza le librerie OpenCV e tkinter per creare un'applicazione c
         Consente di navigare all'interno del video scorrendo quest'ultimo velocemente in avanti, premendo il tasto una sola volta oppure ripremendolo per fermarlo.
       - ### INDIETRO VELOCE CONTINUATIVO
         ```python
+        #tasto play back cliccando [dell]
         if key == 8:
-            key = 0
-            while True:
+            key = 0 #azzeramento valore ascii salvato
+            while True: #ciclo iterativo per lo scorrimento frame per frame
                 if j > 0:
                     key = cv2.waitKey(10)
                     j = j - 1
                     cv2.imshow('video', frames[j])
-                    if key == 8:
+                    if key == 8: #condizione per la rottura del ciclo
                         break
         ```
         Consente di navigare all'interno del video scorrendo quest'ultimo velocemente all'indietro, premendo il tasto una sola volta oppure ripremendolo per fermarlo.
